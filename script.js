@@ -1,6 +1,6 @@
 const botaoStart = document.getElementById("botaoStart")
 const incio = document.getElementById("backImg")
-const gameBoard =  document.getElementById("gameBoard")
+const gameBoard = document.getElementById("gameBoard")
 
 botaoStart.addEventListener("click", () => {
     incio.classList.add("hidden")
@@ -12,40 +12,25 @@ botaoStart.addEventListener("click", () => {
 const homer = document.getElementsByClassName('caneca')[0]
 
 
-
-
-const moveLeft = (event) => {
-    homer.classList.add('move-left')
-
-    setTimeout((event) => {
-        homer.classList.remove('move-left')
-    },3000)
-}
-
-
-console.log(homer)
-
-
-
 window.addEventListener("keydown", (event) => {
+    const homer = document.getElementsByClassName('caneca')[0]
     let kDown = event.key
     console.log(kDown)
-    if (kDown == "ArrowRight") {
-        const moveRight = (event) => {
-            homer.classList.add('move-right')
-           
-            setTimeout((event) => {
-                homer.classList.remove('move-right')
-            }, 3000)
-        } 
-        console.log(homer.outerHTML)
+    if (kDown === "ArrowRight") {
+        const nextRight = homer.nextSibling.nextSibling;
 
-  } if (kDown == "ArrowLeft") {
-    console.log(moveLeft)
-  }
+        nextRight.classList.add('caneca');
+        homer.classList.remove('caneca');
+
+        console.log(homer.className ==="grid")
+    } if (kDown === "ArrowLeft") {
+        const nextLeft = homer.previousSibling.previousSibling
+        if(nextLeft.className === "grid2"){
+        nextLeft.classList.add('caneca')
+        homer.classList.remove('caneca')
+        }
+    }
 })
-
-
 
 
 

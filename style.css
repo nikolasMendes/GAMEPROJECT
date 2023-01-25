@@ -15,8 +15,9 @@
 #backImg {
     background-image: url("./images/2427.jpg");
     background-repeat: no-repeat;
-    background-size: cover ;
-     height: 100vh;
+    background-size: contain ;
+    height: 100vh;
+
 }
 
 #nomeDoJogo {
@@ -90,24 +91,29 @@
     width: 80vw;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 18% 18% 18% 18% 28%;
+    overflow: hidden;
  }
 
-.grid {
+.grid,
+.grid2 {
     border: solid blue;
     display: flex;
     justify-items: center;
     align-items: center;
 }
 
+
+
  .caneca {
     height: 200px;
     width: 200px;
     bottom: 0;
-    position: absolute; 
+    position: relative; 
 
     background-repeat: no-repeat;
     background-image: url(./images/png-transparent-homer-simpson-illustration-homer-simpson-internet-meme-drooling-meme-television-vertebrate-head-thumbnail.png);
     background-size: cover;
+    
     
 }
 
