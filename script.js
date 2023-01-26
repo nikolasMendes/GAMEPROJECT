@@ -33,17 +33,6 @@ window.addEventListener("keydown", (event) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*const caneca = document.getElementsByClassName("caneca")
 
 window.addEventListener("keydown", (event) => {
@@ -58,3 +47,20 @@ caneca.classList.remove("move-right")
 }
 })*/
 
+//------------------------- PARA MEXER O HOMER /\ ----------------------------
+
+const lata = document.getElementsByClassName('lata')[0]
+
+
+ const move = setInterval (() =>{
+    const lata = document.getElementsByClassName('lata')[0];
+const moveSlide = lata.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+moveSlide.classList.add('lata');
+lata.classList.remove('lata');
+
+if (moveSlide.className === "grid2") {
+    clearInterval(move)
+    moveSlide.classList.remove('lata')
+    } 
+ 
+},1000)
