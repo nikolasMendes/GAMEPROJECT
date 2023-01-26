@@ -5,6 +5,7 @@ const gameBoard = document.getElementById("gameBoard")
 botaoStart.addEventListener("click", () => {
     incio.classList.add("hidden")
     gameBoard.classList.remove("hidden")
+    start()
 })
 
 /*pagina inicial /\ --------------------------------------------------- */
@@ -50,17 +51,71 @@ caneca.classList.remove("move-right")
 //------------------------- PARA MEXER O HOMER /\ ----------------------------
 
 const lata = document.getElementsByClassName('lata')[0]
+const htmlPoints = document.getElementsByClassName("pontos")[0]
+
+let points = 0
+
+function start() {
+    let counter = 0;
+    const move = setInterval(() => {
+        const lata = document.getElementsByClassName("lata")[0];
+        const moveSlide =
+        lata.nextElementSibling.nextElementSibling.nextElementSibling
+        .nextElementSibling.nextElementSibling;
+        moveSlide.classList.add("lata");
+        lata.classList.remove("lata");
+        counter++;
+        console.log(counter);
+        if (counter === 4) {
+            clearInterval(move);
+            moveSlide.classList.remove("lata");
+      console.log(moveSlide.classList);
+      if (moveSlide.classList.length === 2) {
+       
+        // se tiver duas classes "caneca" e "lata". player acertou
+        points+=10;
+        htmlPoints.innerHTML = points
 
 
- const move = setInterval (() =>{
-    const lata = document.getElementsByClassName('lata')[0];
-const moveSlide = lata.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
-moveSlide.classList.add('lata');
-lata.classList.remove('lata');
+        console.log(points)
+      } else {
+        console.log("player não pegou a cerveja");
 
-if (moveSlide.className === "grid2") {
-    clearInterval(move)
-    moveSlide.classList.remove('lata')
-    } 
+      }
+    }
+    }, 1000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  const move = setInterval (() =>{
+//     const lata = document.getElementsByClassName('lata')[0];
+// const moveSlide = lata.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+// moveSlide.classList.add('lata');
+// lata.classList.remove('lata');
+
+// if (moveSlide.className === "grid2") {
+//     clearInterval(move)
+//     moveSlide.classList.remove('lata')
+//     } 
  
-},1000)
+// },1000)
