@@ -79,8 +79,12 @@ function start() {
 
         console.log(points)
       } else {
-        console.log("player não pegou a cerveja");
-
+      points-=10;
+   if(points <= 0){
+    alert("GAME OVER !!!!")
+console.log("player não pegou a cerveja");
+}
+       
       }
     }
     }, 1000);
