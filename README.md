@@ -6,7 +6,7 @@ mas como nosso próprio personagem faz,
 não deixe de pegar a sua Duff Beer no jogo, senão é GAME OVER.
 
 
-#INSPIRAÇÃO
+# INSPIRAÇÃO
 
 Se falando de Homer Simpsons, ele já é uma inspiração, mas a motivação vem do sucesso
 e lonegevidade em que o desenho conquistou durante 34 anos.
