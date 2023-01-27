@@ -79,7 +79,7 @@ background-color:gold;
     opacity: 0;
    }
 
-   /*TELA DE INICIO /\ ----------------------------------------------------------------*/
+   /* //TELA DE INICIO /\ ----------------------------------------------------------------/ */
 
 
    .points {
@@ -87,8 +87,8 @@ background-color:gold;
     font-size: x-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
-     padding-left: 1200px;
-
+    margin-right: 50px;
+    right: 0;
 
 }
 
@@ -98,12 +98,13 @@ background-color:gold;
     position: relative;
     background-position: center;
     background-size: cover;
+    /* z-index: -10; */
     display: grid;
     border: solid black;
-    height: 99vh;
-    width: 80vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 18% 18% 18% 18% 28%;
+    height: 600px;
+    width: 800px;
+    margin-left: 100px;
+    margin-top: 100px;
     overflow: hidden;
  }
 
@@ -115,30 +116,26 @@ background-color:gold;
     align-items: center;
 }
 
-
-
-
-
- .caneca {
+ #caneca {
     height: 175px;
     width: 175px;
     bottom: 0;
-    position: relative; 
-    
-
+    position: absolute; 
     background-repeat: no-repeat;
     background-color: transparent;
     background-image: url("./images/pngegg.png");
     background-size: contain;
     align-items: center;
-    margin-left: 18px;
+    align-self: flex-end;
+    z-index: 50;
+}
 
-    
-    
+.hidden {
+    display: none;
 }
 
 .move-right {
-    animation: right 3s infinite linear;
+    animation: right 3s ease-out;
     
 }
 
@@ -164,14 +161,66 @@ background-color:gold;
     }
 }
 
+.move-lata {
+  animation: move-latas0 3s infinite linear;
+}
 
-.lata {
+@keyframes move-latas0 {
+    from {
+      top:  0px;
+      left: 30px;
+    }
+  
+    to {
+      top: 100%;
+      left: 30px;
+    }
+  }
+
+  @keyframes move-latas1 {
+    from {
+      top:  0px;
+      left: 130px;
+    }
+  
+    to {
+      top: 100%;
+      left: 130px;
+    }
+  }
+
+  @keyframes move-latas2 {
+    from {
+      top:  0px;
+      left: 230px;
+    }
+  
+    to {
+      top: 100%;
+      left: 230px;
+    }
+  }
+
+  @keyframes move-latas3 {
+    from {
+      top:  0px;
+      left: 330px;
+    }
+  
+    to {
+      top: 100%;
+      left: 330px;
+    }
+  }
+
+#lata {
     background-image: url("./images/pngegg2.png");
     background-position: center ;
     background-size: contain;
     background-repeat: no-repeat;
-
-    animation: slide 2s infinite linear;
+    height: 175px;
+    width: 175px;
+    position: absolute; 
+    /* animation: slide 2s infinite linear; */
     
 }
-
