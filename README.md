@@ -1,7 +1,7 @@
 # GAMEPROJECT
 
 
-#----- HOMER GAME ----
+# ---- HOMER GAME ----
 
 Esse jogo foi feito no prazo de 5 dias...
 
