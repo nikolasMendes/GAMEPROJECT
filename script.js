@@ -70,13 +70,10 @@ function start() {
             clearInterval(move);
             moveSlide.classList.remove("lata");
       console.log(moveSlide.classList);
-      if (moveSlide.classList.length === 2) {
-       
+      if (moveSlide.classList.length === 2) {       
         // se tiver duas classes "caneca" e "lata". player acertou
         points+=10;
         htmlPoints.innerHTML = points
-
-
         console.log(points)
       } else {
       points-=10;
@@ -84,7 +81,7 @@ function start() {
     alert("GAME OVER !!!!")
 console.log("player não pegou a cerveja");
 }
-       
+     
       }
     }
     }, 1000);
